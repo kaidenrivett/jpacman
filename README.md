@@ -25,3 +25,23 @@ Parts of the code are well tested, whereas others are left untested intentionall
     1. For tests only run `./gradlew test`
     2. For static analysis tools only run `./gradlew staticAnalysis`
 	 
+ANSWERS
+
+Exercise 3: Why can’t we exhaustively test our entire software project? What should we do instead?
+
+We are unable to exhaustively test our entire software project due to the fact that it could take millions of years.
+If a software system has just 100 flags, that's a whopping 1+e30 combinations that need to be tested.
+Instead of this, we can note that bugs are not uniformly distributed and we can have a wide variation of testing in places that present more bugs.
+
+
+Exercise 4: What is the pesticide paradox about and what does it imply to software testers?
+The pesticide paradox refers to the technique of using the same tests over and over again
+they will lose their effectiveness. This paradox implies to software testers that it is important to have
+variety in the testing that is implemented.
+
+
+Exercise 5: Why should we automate, as much as possible, the test execution?
+It is useful to automate the test execution because it saves software testers time.
+This is because they can go through a variety of steps much quicker than a human can, and this in turn provides 
+quick feedback. As well as this, when test executions are automated, it can increase the scope of tests to improve the 
+end result software quality. 
