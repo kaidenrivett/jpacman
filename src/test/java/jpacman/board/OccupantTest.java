@@ -58,7 +58,7 @@ class OccupantTest {
         assertThat(unit.getSquare()).isEqualTo(square);
 
         // check that the unit had the square as an occupant
-        assertThat(square.getOccupants()).isEqualTo(ImmutableList.copyOf(square.getOccupants()));
+        assertThat(square.getOccupants()).isEqualTo(Arrays.asList(unit));
 
     }
 
@@ -74,7 +74,7 @@ class OccupantTest {
 
         assertThat(unit.getSquare()).isEqualTo(square);
 
-        assertThat(square.getOccupants()).isEqualTo(ImmutableList.copyOf(square.getOccupants()));
+        assertThat(square.getOccupants()).isEqualTo(Arrays.asList(unit));
 
     }
 }
