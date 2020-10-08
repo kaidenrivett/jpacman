@@ -60,6 +60,7 @@ errors in code.
 
 PART 2 Smoke Testing (2%) Jpacman
 
+Exercise 4:
 Execute the smoke test, with coverage enabled. Name 2 classes that are not well-tested, and explain why the smoke test does not cover it.
 
 ==> Two classes that are not well tested are the CollisionInteractionMap class, and the LevelFactory class. 
@@ -68,3 +69,14 @@ pacman colliding with any of the ghosts. This is what leads to the 0% methods an
 The smoke test does not cover the LevelFactory class very well either for the reason that the smoker test doesnt include 
 pacman having the ability to eat the ghost and actually consuming one. The situation of having to spawn/creat another ghost
 is never introduced in the smoker test, which causes the coverage of the LevelFactory class to be poor.
+
+
+
+Exercise 5:
+Have a look at class game.Game, method move. Is it covered by oursmoke test?Now, comment out the line in that method, which is invoking the move method from the Level class. Run thesmoke test again. Explain the failure you see, and explain to what extent you think the resulting test failure canbe helpful in fixing the system.
+
+==> Before commenting out the line, the Game class have good coverage, with and 85% methods and 90% lines coverage.
+
+After commenting out the line in the method that invokes the moving method from the Level class,
+the Smoke test fails and we are given the warning that we were expecting a value that we did not receive.
+We can also notice that the coverage of the class has gone down by a substantial amount, proving that our smoke test could include more tests to provide more coverage in a case like this.
