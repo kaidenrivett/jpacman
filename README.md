@@ -76,7 +76,14 @@ Exercise 5:
 Have a look at class game.Game, method move. Is it covered by oursmoke test?Now, comment out the line in that method, which is invoking the move method from the Level class. Run thesmoke test again. Explain the failure you see, and explain to what extent you think the resulting test failure canbe helpful in fixing the system.
 
 ==> Before commenting out the line, the Game class have good coverage, with and 85% methods and 90% lines coverage.
-
 After commenting out the line in the method that invokes the moving method from the Level class,
 the Smoke test fails and we are given the warning that we were expecting a value that we did not receive.
 We can also notice that the coverage of the class has gone down by a substantial amount, proving that our smoke test could include more tests to provide more coverage in a case like this.
+
+
+Exercise 6:
+Exercise 6 (0.5%): Undo the previous change, but now change board.Direction.getDeltaX so that it returns dy instead of dx.
+Next, undo the changes you made, and ensure all tests pass again. Explain what you see. Was it easy to understand where the problem is?
+
+==> After changing the getDeltaX return value to dy, it was obvious that the test had failed, however, I had not noticed a difference
+in the method coverage or the line coverage for the Direction class. So in that case it can be rather hard to locate where the problem is laying.
