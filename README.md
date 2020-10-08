@@ -87,3 +87,10 @@ Next, undo the changes you made, and ensure all tests pass again. Explain what y
 
 ==> After changing the getDeltaX return value to dy, it was obvious that the test had failed, however, I had not noticed a difference
 in the method coverage or the line coverage for the Direction class. So in that case it can be rather hard to locate where the problem is laying.
+
+
+Exercise 7:
+Then, provide at most two paragraphs explaining how Game, Unit,Board, and Level classes are related to each other.
+
+==> The similarity between these 4 classes is that they all have a reasonable amount of coverage from the smoker test.
+This is most likely due to the fact that they are very general and important classes that are crucial to test in order to make sure the pacman game functions properly.
