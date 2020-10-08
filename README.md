@@ -53,3 +53,18 @@ this in turn provides quick feedback. As well as this, when test executions are 
 it can increase scoping of tests that improve the end result of the software quality. As well as this,
 humans are prone to errors, by having test automation you will decrease the likelihood of small
 errors in code.
+
+
+
+
+
+PART 2 Smoke Testing (2%) Jpacman
+
+Execute the smoke test, with coverage enabled. Name 2 classes that are not well-tested, and explain why the smoke test does not cover it.
+
+==> Two classes that are not well tested are the CollisionInteractionMap class, and the LevelFactory class. 
+The smoke test does not cover the CollisionInteractionMap class very well because nowhere in the smoker test does it test 
+pacman colliding with any of the ghosts. This is what leads to the 0% methods and 0% lines covered.
+The smoke test does not cover the LevelFactory class very well either for the reason that the smoker test doesnt include 
+pacman having the ability to eat the ghost and actually consuming one. The situation of having to spawn/creat another ghost
+is never introduced in the smoker test, which causes the coverage of the LevelFactory class to be poor.
