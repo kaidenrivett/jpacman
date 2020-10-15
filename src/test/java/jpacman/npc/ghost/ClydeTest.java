@@ -77,7 +77,7 @@ public class ClydeTest {
     // creating the scenario that clyde is very close to pacman, therefore so we can test
     // if clyde will still try to get away from pacman.
     @Test
-    void ClydeAboutToCommitACrime() {
+    void ClydeOutOfHisComfortZone() {
 
         List<String> map = Lists.newArrayList(
                 "####",
@@ -88,8 +88,8 @@ public class ClydeTest {
         Level level = ghostMapParser.parseMap(map);
         Clyde clyde = Navigation.findUnitInBoard(Clyde.class, level.getBoard());
         level.registerPlayer(pacman);
-//        Unit nearest = Navigation.findNearest(Player.class, level.getSquare());
         pacman.setDirection(Direction.WEST);
+        // although clyde is directly next to pacman, he is still trying to get away
         assertThat(clyde.nextAiMove()).contains((Direction.EAST));
     }
 
