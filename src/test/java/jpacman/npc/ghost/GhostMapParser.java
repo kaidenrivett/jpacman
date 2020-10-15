@@ -5,7 +5,6 @@ import jpacman.board.Square;
 import jpacman.level.LevelFactory;
 import jpacman.level.MapParser;
 import jpacman.npc.Ghost;
-import jpacman.npc.ghost.GhostFactory;
 
 import java.util.List;
 
@@ -40,6 +39,13 @@ public final class GhostMapParser extends MapParser {
         switch (c) {
             case 'C':
                 grid[x][y] = makeGhostSquare(ghosts, ghostFactory.createClyde());
+                break;
+            // create the case for Inky!
+            case 'I':
+                grid[x][y] = makeGhostSquare(ghosts, ghostFactory.createInky());
+                break;
+            case 'B':
+                grid[x][y] = makeGhostSquare(ghosts, ghostFactory.createBlinky());
                 break;
             default:
                 super.addSquare(grid, ghosts, startPositions, x, y, c);

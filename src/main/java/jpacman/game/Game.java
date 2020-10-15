@@ -1,11 +1,11 @@
 package jpacman.game;
 
-import java.util.List;
-
 import jpacman.board.Direction;
 import jpacman.level.Level;
 import jpacman.level.Player;
 import jpacman.points.PointCalculator;
+
+import java.util.List;
 
 /**
  * A basic implementation of a Pac-Man game.

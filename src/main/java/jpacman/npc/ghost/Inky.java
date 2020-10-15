@@ -84,7 +84,7 @@ public class Inky extends Ghost {
     @Override
     public Optional<Direction> nextAiMove() {
         assert hasSquare();
-        Unit blinky = Navigation.findNearest(Blinky.class, getSquare());
+
         Unit player = Navigation.findNearest(Player.class, getSquare());
 
         if (blinky == null || player == null) {
