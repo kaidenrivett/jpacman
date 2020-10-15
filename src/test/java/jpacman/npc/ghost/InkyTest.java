@@ -48,7 +48,7 @@ public class InkyTest {
                 "###############"
         );
         Level level = ghostMapParser.parseMap(map);
-        Blinky blinky = Navigation.findUnitInBoard(Blinky.class, level.getBoard());
+//        Blinky blinky = Navigation.findUnitInBoard(Blinky.class, level.getBoard());
         Inky inky = Navigation.findUnitInBoard(Inky.class, level.getBoard());
         level.registerPlayer(pacman);
 
