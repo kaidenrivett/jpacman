@@ -41,30 +41,28 @@ public class InkyTest {
      * Blinky is far behind him, Inky tends to want to move away from Pac-Man
      * (in reality, to a point very far ahead of Pac-Man) */
     @Test
-    void InkyInFrontBlinkyBehind() {
+    void InkyFollowingBlinky() {
         List<String> map = Lists.newArrayList(
-                "###############",
-                "#  P   B     I#",
-                "###############"
+                "########",
+                "#P   BI#",
+                "########"
         );
         Level level = ghostMapParser.parseMap(map);
-//        Blinky blinky = Navigation.findUnitInBoard(Blinky.class, level.getBoard());
         Inky inky = Navigation.findUnitInBoard(Inky.class, level.getBoard());
         level.registerPlayer(pacman);
 
-        // pacman is west of Inky
+        // pacman is west of Inky and Blinky
         pacman.setDirection(Direction.WEST);
-        // inky is in front of pacman with blinky very far behind, therefore,
-        // inky will try and get very far ahead of pacman
+        // assert that inky will follow in the direction of Blinky if it is behind
         assertThat(inky.nextAiMove()).contains((Direction.WEST));
     }
 
     @Test
-    void BlinkyBetweenPacmanAndInky() {
+    void InkyInFrontBlinkyBehind() {
         List<String> map = Lists.newArrayList(
-                "#######",
-                "#P  BI#",
-                "#######"
+                "############",
+                "#B   P    I#",
+                "############"
         );
         Level level = ghostMapParser.parseMap(map);
         Inky inky = Navigation.findUnitInBoard(Inky.class, level.getBoard());
@@ -72,24 +70,11 @@ public class InkyTest {
         level.registerPlayer(pacman);
 
         // pacman is east of Inky
-        pacman.setDirection(Direction.WEST);
-        // inky is in front of pacman with blinky very far behind, therefore,
-        // inky will try and get very far ahead of pacman
+        pacman.setDirection(Direction.EAST);
+        // inky is in front of pacman and blinky is behind pacman, therefore
+        // we should assert that inky will try to move in the opposite direction of pacman
         assertThat(inky.nextAiMove()).contains((Direction.WEST));
 
     }
-//    @Test
-//    void IsBlinkyNearInky() {
-//        List<String> map = Lists.newArrayList(
-//                "###############",
-//                "#       P    I#",
-//                "###############"
-//        );
-//        Level level = ghostMapParser.parseMap(map);
-//        Blinky blinky = Navigation.findUnitInBoard(Blinky.class, level.getBoard());
-//        Inky inky = Navigation.findUnitInBoard(Inky.class, level.getBoard());
-//        pacman.setDirection(Direction.EAST);
-//        assertThat(blinky.nextAiMove(), Null);
-//    }
 }
 

@@ -67,7 +67,6 @@ public class ClydeTest {
         );
         Level level = ghostMapParser.parseMap(map);
         Clyde clyde = Navigation.findUnitInBoard(Clyde.class, level.getBoard());
-
         level.registerPlayer(pacman);
         pacman.setDirection(Direction.WEST);
 
