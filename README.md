@@ -94,3 +94,25 @@ Then, provide at most two paragraphs explaining how Game, Unit,Board, and Level 
 
 ==> The similarity between these 4 classes is that they all have a reasonable amount of coverage from the smoker test.
 This is most likely due to the fact that they are very general and important classes that are crucial to test in order to make sure the pacman game functions properly.
+
+
+
+
+Lab 4 Understanding your tests
+Tests can be divided into three parts: Arrange, Act, Assert (AAA). Let's discuss each of these parts. Answer any two of the following questions.
+
+-   What can we do to avoid code repetition during the Arrange part of the unit test? 
+
+To avoid code repetition in the Arrange part of the unit test, we can use the "@Before Each" annotation to signal that whatever is
+inside the method block, it should be executed before each Test method. This cleans up a lot of the test code and decreases the amount of errors that could be produced by 
+typing out what you want executed in each singular test case. Along with this, with every test thats run, everything inside the BeforeEach method will be freshly executed, which
+will avoid the possibility of "weird" errors.
+
+
+- JUnit and related libraries provide developers with different ways to do assertions. Some can be better than others in specific contexts.
+Which one is a better assertion, supposing some int a? 1) assertEquals(1, a); or 2) assertTrue(1 == a)? Discuss the differences between both assertions.
+
+The first assertion mentioned, assertEquals, asserts that two objects are equal and if they aren't the assertion error is thrown and 
+a message is displayed showing the expected value and the actual value. The second assertion mentioned is assertTrue asserts that a 
+particular condition is true, and if not, the assertion error is thrown, displaying only the particular condition that needs to be checked.
+In my opinion, I think assertEquals is the better assertion to use, even with an integer because when the error is thrown, the error message is much more clear in what value it is looking for.
