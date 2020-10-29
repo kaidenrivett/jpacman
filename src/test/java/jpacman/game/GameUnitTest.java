@@ -24,8 +24,20 @@ public class GameUnitTest {
         game = new SinglePlayerGame(player, level, mock(PointCalculator.class));
 
     }
+    // test the first if statement
     @Test
-    void freshStart() {
+    void isInProgressBranch() {
+        when(level.isInProgress()).thenReturn(true);
+        game.start();
+        assertThat(game.isInProgress()).isFalse();
+    }
+    
+    
+    
+    
+    // test the second if statement
+    @Test
+    void pelletsAndPlayerGreaterThanZero() {
         when(level.isAnyPlayerAlive()).thenReturn(true);
         when(level.remainingPellets()).thenReturn(42);
 
