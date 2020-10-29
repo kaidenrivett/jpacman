@@ -22,6 +22,7 @@ public class ClydeTest {
     @BeforeEach
     void setup() {
         PacManSprites sprites = new PacManSprites();
+
         GhostFactory ghostFactory = new GhostFactory(sprites);
 
         PointCalculator pointCalculator = new DefaultPointCalculator();
