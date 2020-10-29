@@ -1,14 +1,11 @@
 package jpacman.level;
 
 import jpacman.PacmanConfigurationException;
-import jpacman.board.BoardFactory;
-import jpacman.board.Square;
+import jpacman.board.*;
+import jpacman.game.Game;
 import jpacman.game.GameFactory;
-import jpacman.npc.Ghost;
-import jpacman.points.PointCalculator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.Collections;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -16,15 +13,13 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.Mockito.*;
 
+
 public class MapParserUnitTest {
 
     private MapParser mapParser;
     private LevelFactory levelFactory;
     private BoardFactory boardFactory;
     private GameFactory gameFactory;
-    private Square square;
-    private Level level;
-    private PointCalculator pointCalculator;
 
     @BeforeEach
     void setUp() {
@@ -34,7 +29,6 @@ public class MapParserUnitTest {
         gameFactory = mock(GameFactory.class);
         // create a mapparser that uses the mock objects
         mapParser = new MapParser(levelFactory, boardFactory);
-        square = mock(Square.class);
     }
 
     // Exercise 1
@@ -49,7 +43,7 @@ public class MapParserUnitTest {
 
         // try player and pellet, it gets interesting.
     }
-    // Test suites
+
     @Test
     void parsePellet() {
         Square square = mock(Square.class);
@@ -67,19 +61,7 @@ public class MapParserUnitTest {
         verify(levelFactory).createLevel(any(), anyList(), anyList());
     }
 
-    @Test
-    void parsePlayer() {
-        Square square = mock(Square.class);
-        when(boardFactory.createGround()).thenReturn((square));
 
-        Player player = mock(Player.class);
-//        when(gameFactory.createSinglePlayerGame()).thenReturn(player);
-
-        mapParser.parseMap(Collections.singletonList("P"));
-
-
-
-    }
 
     // Exercise 2 Bad Weather Tests
     @Test
