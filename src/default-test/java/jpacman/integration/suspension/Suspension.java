@@ -1,4 +1,4 @@
-package jpacman.integration;
+package jpacman.integration.suspension;
 
 public class Suspension {
 }

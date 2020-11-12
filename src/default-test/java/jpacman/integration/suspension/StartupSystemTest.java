@@ -1,4 +1,4 @@
-package jpacman.integration;
+package jpacman.integration.suspension;
 
 import jpacman.Launcher;
 import jpacman.game.Game;
