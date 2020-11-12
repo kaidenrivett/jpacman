@@ -116,3 +116,37 @@ The first assertion mentioned, assertEquals, asserts that two objects are equal 
 a message is displayed showing the expected value and the actual value. The second assertion mentioned is assertTrue asserts that a 
 particular condition is true, and if not, the assertion error is thrown, displaying only the particular condition that needs to be checked.
 In my opinion, I think assertEquals is the better assertion to use, even with an integer because when the error is thrown, the error message is much more clear in what value it is looking for.
+
+
+Lab 6 Testing Collisions
+
+Exercise 2
+
+- What is your opinion regarding achieving 100% code coverage? What are the advantages/disadvantages? How should one deal with such metrics, in your opinion?
+This one should be easy?
+
+Some of the advantages that are involved with 100% code coverage is that you have covered all of your code. However, this is not necessarily true because there will always be bugs in the code you are testing. A disadvantage 
+to 100% code coverage is that it could take a long time to come up with 100% code coverage. Although it is very important to perform tests on code, it gets to a point where you may be spending too much time on testing it.
+Ultimately, it depends on the type of testing you're doing which would make it more feasible to get 100% code coverage
+
+- Our test suite is pretty fast. However, the more a test suite grows the more time it takes to execute. Can you think of scenarios (more than one) that can lead a single test (and eventually the entire test suite) to become slow? What can we do to mitigate the issue?
+
+A possible scenario could be having all of your test cases in one class versus having them spread out. Having them all in the same class would cause the execution time to be much greater compared to having them in different classes. 
+Another scenario that could cause an increase in execution time is the type of testing you are performing. E.g., if you are doing system testing, you have to have the entire system running and executing various tests. With unit testing 
+you are only performing the various tests on a particular part of the system.
+
+
+Lab 7 System Testing
+
+Exercise 3
+
+- Consider scenarios 2.4 and 2.5. Explain why it is harder to create system test cases(when compared to your previous experience with unit testing) for these scenarios.
+
+From comparing these two scenarios it would be harder because the ghosts are AI and it is difficult to figure out where they will go
+
+
+
+Exercise 5
+
+- Answer the question in exercise 3 for User Story 3 (moving monsters).
+
