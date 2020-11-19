@@ -153,4 +153,8 @@ whether all of the pellets are no longer on the map or not.
 Exercise 5
 
 - Answer the question in exercise 3 for User Story 3 (moving monsters).
+As mentioned before, it is difficult to test the ghosts 
+due to their unpredictable behaviour. It would also be 
+difficult to determine the exact moment that a ghost 
+would be covering a pellet or not.
 
