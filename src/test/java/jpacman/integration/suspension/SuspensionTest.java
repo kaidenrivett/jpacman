@@ -39,7 +39,7 @@ public class SuspensionTest {
         assertFalse(game.isInProgress());
     }
 
-    // scenario S4.2\
+    // scenario S4.2
     @Test
     public void resumeSuspendedGame() {
         game.stop();
