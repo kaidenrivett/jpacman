@@ -142,8 +142,12 @@ Exercise 3
 
 - Consider scenarios 2.4 and 2.5. Explain why it is harder to create system test cases(when compared to your previous experience with unit testing) for these scenarios.
 
-From comparing these two scenarios it would be harder because the ghosts are AI and it is difficult to figure out where they will go
-
+Looking at scenario 2.4, it would be hard to create a
+system test for this because the ghosts are AI and 
+it is difficult to figure out in which direction they will go.
+As for scenario 2.5, this would be difficult to create a 
+system test for because it would be difficult to determine
+whether all of the pellets are no longer on the map or not.
 
 
 Exercise 5
